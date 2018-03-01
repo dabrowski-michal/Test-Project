@@ -68,11 +68,15 @@ public class PlayerController : MonoBehaviour {
         Vector3 forward = mainCamera.transform.forward;
         Vector3 right = mainCamera.transform.right;
 
+        //freeze transform on the Y axis
         forward.y = 0f;
         right.y = 0f;
+
+        //normalize vectors
         forward.Normalize();
         right.Normalize();
 
+        //move the rigidbody
         moveDirection = forward * verticalAxis + right * horizontalAxis;
         playerRigidbody.MovePosition(transform.position + moveDirection * speed * Time.deltaTime);
     }
