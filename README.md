@@ -1,2 +1,2 @@
 # Test-Project
-Simple Unity modular level with player movement.
+Simple Unity modular level with basic player movement.
